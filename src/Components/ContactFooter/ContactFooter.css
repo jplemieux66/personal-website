@@ -1,0 +1,9 @@
+#contact-links {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-link {
+  margin: 0 10px;
+  vertical-align: center;
+}
