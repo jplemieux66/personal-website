@@ -5,6 +5,15 @@
 
 .contact-link {
   margin: 0 20px;
+  color: #3F51B5;
+}
+
+.contact-link:hover {
+  color: #CDDC39;
+}
+
+.contact-link:active {
+  color: #3F51B5;
 }
 
 .contact-link__icon {
