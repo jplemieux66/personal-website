@@ -1,30 +1,108 @@
 .navbar {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
-  background-color: #303F9F;
-  color: white;
-  box-shadow: 1px 1px 5px #888888;
+  background-color: #E6E6E6;
+  padding: 5px;
 }
 
 .navbar-content {
+  list-style: none;
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 1000px;
-  padding: 10px;
+  padding: 5px 10px;
+}
+
+.navbar-toggle-container {
+  width: 100%;
+}
+
+.navbar-toggle {
+  display: none;
+  align-items: center;
+  float: right;
+  margin: 6px;
+  height: 40px;
+  width: 40px;
+}
+
+.navbar-toggle span,
+.navbar-toggle span::before,
+.navbar-toggle span::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #333;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle.toggled span {
+  background: transparent;
+}
+
+.navbar-toggle.toggled span::before,
+.navbar-toggle.toggled span::after {
+  transform-origin: center;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggle.toggled span::before {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggle span::before {
+  top: 15px;
+}
+
+.navbar-toggle span::after {
+  top: -17px;
+}
+
+@media (max-width:650px) {
+  .navbar-link {
+    margin: 15px 0;
+  }
+  .navbar-link:first-child {
+    margin: 0 0 15px 0;
+  }
+
+  .navbar-content {
+    display: none;
+  }
+  
+  .navbar-content.visible {
+    display: flex;
+  }
+
+  .navbar-content {
+    flex-direction: column;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .menu-hover-lines a:before {
+    display: none;
+  }
 }
 
 .menu-hover-lines {
   text-align: center;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   transition: all 0.35s ease;
 }
 
 .menu-hover-lines li a {
-  padding: 0.75rem 0;
-  color: white;
+  padding: 0.5rem 0;
+  color: #3F51B5;
   position: relative;
   margin-left: 1rem;
 }
@@ -59,6 +137,7 @@
 
 .menu-hover-lines a:hover,
 .menu-hover-lines li.active > a {
+  color: #303F9F;
   transition: all 0.35s ease;
 }
 

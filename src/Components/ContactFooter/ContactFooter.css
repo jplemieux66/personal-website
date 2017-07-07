@@ -1,6 +1,7 @@
 #contact-links {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .contact-link {
@@ -24,7 +25,7 @@
   padding: 0 0 0 5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .contact-link__text {
     display: none;
   }
